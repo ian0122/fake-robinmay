@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+    <title>log in</title>
+    <link rel="stylesheet" href="/CSS/login.css">
+</head>
+
+<body>
+    <div id="sidebar"></div>
+    <form>
+        <h1>登入</h1>
+        <input type="text" placeholder="電郵或手機號碼">
+        <input type="password" placeholder="密碼">
+        <button onclick="login()">開始購物吧!</button>
+    </form>
+    <script>
+        function login() {
+            window.location.href = "hi.html";
+            alert("成功")
+        }
+
+        fetch("sidebar.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("sidebar").innerHTML = html;
+
+            });
+    </script>
+</body>
